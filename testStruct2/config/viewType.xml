@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="viewType" extends="struts-default" namespace="/viewType">
+		<action name="chain" class="com.bsq.struts2.test.ChainAction"
+			method="chain">
+			<result name="success" type="chain">
+
+				<param name="namespace">/viewType2</param>
+
+				<param name="actionName">chain2</param>
+
+			</result>
+		</action>
+
+		<!-- <action name="chain2" class="com.bsq.struts2.test.Chain2Action" method="chain2"> 
+			<result name="success" type="redirect">/chain.jsp</result> </action> -->
+	</package>
+
+	<package name="viewType2" extends="struts-default" namespace="/viewType2">
+
+		<action name="chain2" class="com.bsq.struts2.test.Chain2Action"
+			method="chain2">
+
+			<result name="success" type="dispatcher">/chain2.jsp</result>
+		</action>
+
+	</package>
+
+
+</struts>

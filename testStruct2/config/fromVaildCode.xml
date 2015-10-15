@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="fromVaildCodepkg" extends="struts-default"
+		namespace="/from">
+		<result-types>
+			<result-type name="captcha" class="com.bsq.struts2.result.VaildCode"></result-type>
+		</result-types>
+		<action name="fromVaildCode">
+			<result name="success" type="captcha">
+
+				<param name="width">250</param>
+
+				<param name="heignt">200</param>
+
+			</result>
+		</action>
+	</package>
+
+</struts>

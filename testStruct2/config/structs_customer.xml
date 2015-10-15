@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="customer" extends="struts-default" namespace="/customer">
+
+		<!-- <action name="add_customer" class="com.bsq.struts2.test.customerAction" 
+			method="add"> <result name="success" type="dispatcher">/success.jsp</result> 
+			</action> <action name="edit_customer" class="com.bsq.struts2.test.customerAction" 
+			method="edit"> <result name="success" type="dispatcher">/success.jsp</result> 
+			</action> <action name="delete_customer" class="com.bsq.struts2.test.customerAction" 
+			method="delete"> <result name="success" type="dispatcher">/success.jsp</result> 
+			</action> -->
+
+		<!-- 通配符 -->
+		<action name="*_*" class="com.bsq.struts2.test.{2}Action" method="{1}">
+
+			<result name="success" type="dispatcher">/success.jsp</result>
+
+		</action>
+	</package>
+	
+	<package name="p2" extends="struts-default" namespace="/test">
+	
+	</package>
+
+</struts>
